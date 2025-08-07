@@ -34,7 +34,7 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <div className="flex items-center gap-5 mr-6 ">
+        <div className="flex items-center gap-8 mr-6 ">
           <button onClick={openLinkedIn}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
