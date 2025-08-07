@@ -3,7 +3,7 @@ import { projectData } from "../../data/projectData";
 
 const Project = () => {
   return (
-    <div className="md:mr-10 bg-white p-10 rounded-lg shadow-lg w- border-4 border-[#0d3b24] w-1/2">
+    <div className="md:mx-10 bg-white p-10 rounded-lg shadow-lg border-4 border-[#0d3b24] ">
       <h1 className="text-3xl font-bold text-center mb-5">Projects</h1>
       <p className="text-center text-gray-600 mb-5">
         Here are some of the projects I have worked on, showcasing my skills in
@@ -18,6 +18,9 @@ const Project = () => {
             DateProject={project.dateProject}
             Responsibilities={project.responsibilities}
             TechStack={project.techStack}
+            ImageUrl={project.imageUrl}
+            ImageTitle={project.imageTitle}
+            githubUrl={project.githubUrl}
           />
         ))}
       </div>
