@@ -2,6 +2,7 @@ import Background from "./components/layout/background";
 import Hero from "./components/layout/hero";
 import NavBar from "./components/layout/navbar";
 import Experience from "./components/layout/experience";
+import Project from "./components/layout/project";
 
 export default function Home() {
   return (
@@ -9,7 +10,10 @@ export default function Home() {
       {/* <Background /> */}
       <NavBar />
       <Hero />
-      <Experience />
+      <div className="w-full flex items-start justify-start bg-[#e4e6eb] gap-10">
+        <Experience />
+        <Project/>
+      </div>
     </div>
   );
 }
