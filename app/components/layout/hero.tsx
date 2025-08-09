@@ -45,11 +45,10 @@ const HeroLayout = () => {
       </div>
       <div className="flex items-center justify-center w-1/2 m-7">
         <Image
-          src="/assets/pp.jpeg"
-          width={400}
-          height={400}
-          alt="Photo of Zain"
-          className="rounded-xl border-4 border-[#0d3b24] shadow-2xl drop-shadow-xl transition-transform duration-500 hover:scale-105"
+          src="/assets/ppcartoon3.png"
+          width={600}
+          height={600}
+          alt="Photo"
         ></Image>
       </div>
     </div>
