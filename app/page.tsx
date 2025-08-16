@@ -13,11 +13,11 @@ export default function Home() {
   return (
     <div className="relative flex min-h-screen bg-background text-foreground overflow-x-hidden duration-300 mx-24 transition-colors">
       {/* Theme Toggle */}
-      <div className="fixed bottom-0 right-0 mr-4 mb-4">
+      <div className="fixed bottom-0 right-0 mr-4 mb-4 ">
         <ThemeToggle />
       </div>
       <NavbarV2 />
-      <div className="flex justify-between w-full">
+      <div className=" justify-between w-full items-center ">
         <ProfileLayout />
       </div>
     </div>

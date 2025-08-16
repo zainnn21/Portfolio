@@ -6,8 +6,8 @@ import Image from "next/image";
 
 const Profile = () => {
   return (
-    <div className="flex justify-around w-full">
-      <div className="flex flex-col gap-8 justify-center">
+    <div className="flex justify-center items-center h-screen ">
+      <div className="flex flex-col gap-8 justify-center w-1/2 ">
         <SplitText
           text="Hello 👋"
           className="text-7xl font-semibold"
@@ -33,13 +33,13 @@ const Profile = () => {
           ))}
         </div>
       </div>
-      <div className="flex">
+      <div className="w-1/2 items-center justify-center flex ">
         <Image
           src="/assets/pphome.png"
           alt="Profile Picture"
-          width={600}
-          height={100}
-          className="hidden md:block"
+          width={550}
+          height={550}
+          className="hover:rounded-3xl hover:shadow-2xl hover:scale-105 ease-in-out duration-500 hover:border-4  hover:drop-shadow-2xl"
         ></Image>
       </div>
     </div>
