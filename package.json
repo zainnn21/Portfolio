@@ -10,16 +10,19 @@
   },
   "dependencies": {
     "@radix-ui/react-toast": "^1.2.15",
+    "@tabler/icons-react": "^3.34.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "gsap": "^3.13.0",
     "lucide-react": "^0.539.0",
+    "motion": "^12.23.12",
     "next": "14.2.31",
     "ogl": "^1.0.11",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.5.0",
-    "tailwind-merge": "^3.3.1"
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
