@@ -6,8 +6,8 @@ import Image from "next/image";
 
 const Profile = () => {
   return (
-    <div className="flex justify-center items-center h-screen ">
-      <div className="flex flex-col gap-8 justify-center w-1/2 ">
+    <div className="flex justify-between items-center h-screen w-full">
+      <div className="flex flex-col gap-8 justify-center ">
         <SplitText
           text="Hello 👋"
           className="text-7xl font-semibold"

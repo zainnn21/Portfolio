@@ -1,24 +1,79 @@
-import ExperienceCards from "../elements/ExperienceCards";
-import { experienceData } from "../../data/experienceData";
+"use client";
 
-const Experience = () => {
+import { motion } from "framer-motion";
+import { experienceData } from "@/app/data/experienceData";
+import { FaExternalLinkAlt } from "react-icons/fa";
+
+const ExperienceSection = () => {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, x: -50 },
+    show: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <div className=" md:ml-10 bg-white p-10 rounded-lg shadow-lg w- border-4 border-[#0d3b24] w-1/2 ">
-      <h1 className="text-3xl font-bold text-center ">Experience</h1>
-      <div className="flex flex-col gap-8 mt-5">
+    <div className="w-full max-w-4xl p-8">
+      <motion.h2
+        className="text-4xl font-bold text-center mb-16"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        Work Experience
+      </motion.h2>
+
+      <motion.div
+        className="relative border-l-2 border-slate-700 pl-10"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         {experienceData.map((exp) => (
-          <ExperienceCards
+          <motion.div
             key={exp.id}
-            TitleCard={exp.title}
-            Location={exp.location}
-            DateJob={exp.date}
-            Position={exp.position}
-            Responsibilities={exp.responsibilities}
-            cardVariant={exp.varianCard}
-          />
+            className="relative pl-10 pb-12"
+            variants={item}
+          >
+            <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-6 shadow-lg transition-all duration-300 hover:border-green-400/30 hover:shadow-green-400/10">
+              <p className="text-sm font-semibold ">{exp.duration}</p>
+              <h3 className="mt-1 text-2xl font-bold ">{exp.role}</h3>
+              {exp.companyUrl ? (
+                <a
+                  href={exp.companyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-lg  hover:underline"
+                >
+                  {exp.company}
+                  <FaExternalLinkAlt className="h-3.5 w-3.5" />
+                </a>
+              ) : (
+                <p className="text-lg ">{exp.company}</p>
+              )}
+              <p className="text-sm  mb-4">{exp.location}</p>
+
+              <ul className="list-disc space-y-2 pl-5 text-slate-300">
+                {exp.responsibilities.map((resp, index) => (
+                  <li key={index}>{resp}</li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
-export default Experience;
+
+export default ExperienceSection;

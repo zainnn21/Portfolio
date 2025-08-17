@@ -1,25 +1,80 @@
 "use client";
 
-// import Hero from "./components/layout/hero";
-// import NavBar from "./components/layout/navbar";
-// import Experience from "./components/layout/experience";
-// import Project from "./components/layout/project";
-// import StarBackground from "./components/elements/StarBackground/starbackground";
+import { useState, useEffect } from "react";
 import NavbarV2 from "./components/layout/navbarv2";
+import AboutSection from "./components/layout/about";
 import ThemeToggle from "./components/elements/ThemeToggle/themetoggle";
 import ProfileLayout from "./components/layout/profile";
+import StarBackground from "./components/elements/StarBackground";
+import Preloader from "./components/layout/Preloader";
+import SkillsSection from "./components/layout/skills";
+import ProjectsSection from "./components/layout/projects";
+import ExperienceSection from "./components/layout/experience";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Mensimulasikan waktu loading untuk demonstrasi
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 0); // Atur waktu sesuai kebutuhan (dalam milidetik)
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="relative flex min-h-screen bg-background text-foreground overflow-x-hidden duration-300 mx-24 transition-colors">
-      {/* Theme Toggle */}
-      <div className="fixed bottom-0 right-0 mr-4 mb-4 ">
-        <ThemeToggle />
-      </div>
-      <NavbarV2 />
-      <div className=" justify-between w-full items-center ">
-        <ProfileLayout />
-      </div>
-    </div>
+    <>
+      <Preloader isLoading={isLoading} />
+      {!isLoading && (
+        <>
+          <StarBackground />
+          <main className="relative text-foreground animate-fadeIn">
+            <div className="fixed bottom-0 right-0 mr-4 mb-4 z-50">
+              <ThemeToggle />
+            </div>
+            <NavbarV2 />
+            {/* Section 1: Profile/Hero */}
+            <section
+              id="home"
+              className="flex min-h-screen items-center justify-center px-24"
+            >
+              <ProfileLayout />
+            </section>
+            {/* section 2: About Me */}
+            <section
+              id="about"
+              className="flex min-h-screen items-center justify-center px-24"
+            >
+              <AboutSection />
+            </section>
+            {/* section 3: Skills */}
+            <section
+              id="skills"
+              className="flex min-h-screen items-center justify-center px-24"
+            >
+              <SkillsSection />
+            </section>
+            {/* section 4: Projects */}
+            <section
+              id="projects"
+              scroll-mt-20
+              className="flex min-h-screen items-center justify-center px-4 md:px-24"
+            >
+              <ProjectsSection />
+            </section>
+            {/* section 5: Experience */}
+            <section
+              id="experience"
+              className="flex min-h-screen items-center justify-center px-4 md:px-24"
+            >
+              <ExperienceSection />
+            </section>
+            {/* section 6: Education & Certifications */}
+            {/* section 5: Contact */}
+          </main>
+        </>
+      )}
+    </>
   );
 }

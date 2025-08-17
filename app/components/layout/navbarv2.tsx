@@ -9,10 +9,12 @@ const navbarv2 = () => {
         pillColor="#ffffff"
         hoveredPillTextColor="#ffffff"
         pillTextColor="#000000"
-        logoAlt="Company Logo"
+        logoAlt="Logo"
         items={[
-          { label: "Home", href: "/" },
-          { label: "About", href: "/about" },
+          { label: "Home", href: "#home" },
+          { label: "About", href: "#about" },
+          { label: "Skills", href: "#skills" },
+          { label: "Projects", href: "#projects" },
           { label: "Services", href: "/services" },
           { label: "Contact", href: "/contact" },
         ]}
