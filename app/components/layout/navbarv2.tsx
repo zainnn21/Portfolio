@@ -1,5 +1,4 @@
 import PillNav from "../elements/PillNav/PillNav";
-import { ContactButton } from "../../utils/ContactMail";
 
 const navbarv2 = () => {
   const email = "habibzain.anis@gmail.com";
