@@ -26,7 +26,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <div className="w-full max-w-6xl p-8">
+    <div className="w-full max-w-7xl p-8">
       <motion.h2
         className="text-4xl font-bold text-center mb-12"
         initial={{ opacity: 0, y: -20 }}
@@ -38,7 +38,7 @@ const SkillsSection = () => {
       </motion.h2>
       {/* Container untuk semua kategori */}
       <motion.div
-        className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+        className="grid grid-cols-1 lg:grid-cols-3 gap-8 "
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -49,7 +49,8 @@ const SkillsSection = () => {
           <motion.div
             key={category.id}
             variants={itemVariants}
-            className="p-6 rounded-lg shadow-2xl border-4 bg-background/80 backdrop-blur-sm flex flex-col gap-4"
+            whileHover={{ translateY: -5 }}
+            className="p-6 rounded-lg shadow-2xl border-4 bg-background/80 backdrop-blur-sm flex flex-col gap-4 transition-transform duration-300 ease-in-out hover:border-green-400/30 hover:shadow-green-400/10 cursor-pointer"
           >
             <h3 className="text-2xl font-semibold text-center text-[#0CB36B] mb-4">
               {category.title}

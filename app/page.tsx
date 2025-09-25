@@ -10,6 +10,8 @@ import Preloader from "./components/layout/Preloader";
 import SkillsSection from "./components/layout/skills";
 import ProjectsSection from "./components/layout/projects";
 import ExperienceSection from "./components/layout/experience";
+import EducationSection from "./components/layout/education";
+import ContactSection from "./components/layout/contact"
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -58,7 +60,6 @@ export default function Home() {
             {/* section 4: Projects */}
             <section
               id="projects"
-              scroll-mt-20
               className="flex min-h-screen items-center justify-center px-4 md:px-24"
             >
               <ProjectsSection />
@@ -71,7 +72,19 @@ export default function Home() {
               <ExperienceSection />
             </section>
             {/* section 6: Education & Certifications */}
-            {/* section 5: Contact */}
+            <section
+            id="education"
+            className="flex min-h-screen items-center justify-center px-4 md:px-24"
+            > 
+            <EducationSection/>
+            </section>
+            {/* section 7: Contact */}
+            <section
+            id="contact"
+            className="flex min-h-screen items-center justify-center px-4 md:px-24"
+            >
+              <ContactSection/>
+            </section>
           </main>
         </>
       )}

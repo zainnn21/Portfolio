@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { IconType } from "react-icons";
 
 interface SkillBarProps {
@@ -10,7 +10,7 @@ interface SkillBarProps {
 }
 
 const SkillBar = ({ name, level, Icon }: SkillBarProps) => {
-  const variants = {
+  const variants: Variants = {
     hidden: { width: 0 },
     visible: {
       width: `${level}%`,

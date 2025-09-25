@@ -13,8 +13,9 @@ import {
   SiC,
   SiSpringboot,
   SiElasticsearch,
+  SiUnity,
 } from "react-icons/si";
-import { FaCode, FaDatabase } from "react-icons/fa";
+import { FaCode, FaDatabase, FaJira } from "react-icons/fa";
 import { IconType } from "react-icons";
 import { TbBrandCSharp } from "react-icons/tb";
 
@@ -38,17 +39,14 @@ export const skillsData: SkillCategory[] = [
       { name: "React & Next.js", level: 85, Icon: SiNextdotjs },
       { name: "TypeScript", level: 75, Icon: SiTypescript },
       { name: "Tailwind CSS", level: 80, Icon: SiTailwindcss },
-      { name: "Framer Motion", level: 50, Icon: SiFramer },
     ],
   },
   {
     id: 2,
-    title: "Backend & Database",
+    title: "Backend Development",
     skills: [
       { name: "Node.js & Express", level: 75, Icon: SiNodedotjs },
-      { name: "PostgreSQL", level: 70, Icon: SiPostgresql },
-      { name: "Oracle", level: 70, Icon: SiOracle },
-      { name: "RESTful APIs", level: 70, Icon: FaCode },
+      { name: "TypeScript", level: 75, Icon: SiTypescript },
       { name: "C#", level: 40, Icon: TbBrandCSharp },
       { name: "C", level: 60, Icon: SiC },
       { name: "Java  & Spring Boot", level: 65, Icon: SiSpringboot },
@@ -58,9 +56,19 @@ export const skillsData: SkillCategory[] = [
     id: 3,
     title: "Tools & DevOps",
     skills: [
-      { name: "Git & GitHub", level: 85, Icon: SiGit },
+      { name: "GitHub", level: 85, Icon: SiGit },
       { name: "Docker", level: 50, Icon: SiDocker },
       { name: "Elasticsearch", level: 50, Icon: SiElasticsearch },
+      {name: "Jira", level:50, Icon: FaJira},
+      { name: "unity", level: 40, Icon: SiUnity },
+    ],
+  },
+  {
+    id: 4,
+    title: "Database",
+    skills: [
+      { name: "PostgreSQL", level: 70, Icon: SiPostgresql },
+      { name: "Oracle", level: 70, Icon: SiOracle },
     ],
   },
 ];

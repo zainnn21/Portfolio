@@ -15,8 +15,9 @@ const navbarv2 = () => {
           { label: "About", href: "#about" },
           { label: "Skills", href: "#skills" },
           { label: "Projects", href: "#projects" },
-          { label: "Services", href: "/services" },
-          { label: "Contact", href: "/contact" },
+          { label: "Experience", href: "#experience" },
+          { label: "Education", href: "#education"},
+          { label: "Contact", href: "#contact" },
         ]}
         activeHref="/"
         className="custom-nav"

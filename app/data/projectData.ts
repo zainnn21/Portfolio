@@ -13,7 +13,12 @@ import {
   SiMysql,
   SiBootstrap,
 } from "react-icons/si";
-import { TbBrandCSharp, TbBrandJavascript, TbBrandNodejs } from "react-icons/tb";
+import {
+  TbBrandCSharp,
+  TbBrandJavascript,
+  TbBrandNodejs,
+  TbBrandTypescript,
+} from "react-icons/tb";
 
 export interface Tech {
   name: string;
@@ -48,7 +53,7 @@ export const projectData: Project[] = [
       { name: "React", Icon: SiReact },
       { name: "Tailwind CSS", Icon: SiTailwindcss },
       { name: "Node.js", Icon: TbBrandNodejs },
-      { name: "Javascript", Icon: TbBrandJavascript },
+      { name: "Typescript", Icon: TbBrandTypescript },
     ],
     imageUrl: "/assets/videobelajar.png",
     githubUrl: "https://github.com/zainnn21/videobelajar-web",
@@ -87,7 +92,6 @@ export const projectData: Project[] = [
     techStack: [
       { name: "React", Icon: SiReact },
       { name: "Tailwind CSS", Icon: SiTailwindcss },
-      { name: "Node.js", Icon: TbBrandNodejs },
     ],
     imageUrl: "/assets/underdevelopment.jpg",
     githubUrl: "#", // Repositori tidak publik

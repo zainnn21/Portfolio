@@ -45,15 +45,15 @@ const ExperienceSection = () => {
             className="relative pl-10 pb-12"
             variants={item}
           >
-            <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-6 shadow-lg transition-all duration-300 hover:border-green-400/30 hover:shadow-green-400/10">
+            <div className="rounded-lg border-4 bg-background/80 backdrop-blur-sm p-6 shadow-2xl transition-all duration-300 hover:border-green-400/30 hover:shadow-green-400/10 hover:-translate-y-2 cursor-pointer">
               <p className="text-sm font-semibold ">{exp.duration}</p>
-              <h3 className="mt-1 text-2xl font-bold ">{exp.role}</h3>
+              <h3 className="mt-1 text-2xl text-[#0CB36B] font-bold ">{exp.role}</h3>
               {exp.companyUrl ? (
                 <a
                   href={exp.companyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-lg  hover:underline"
+                  className="inline-flex items-center gap-2 text-lg hover:underline"
                 >
                   {exp.company}
                   <FaExternalLinkAlt className="h-3.5 w-3.5" />
@@ -63,7 +63,7 @@ const ExperienceSection = () => {
               )}
               <p className="text-sm  mb-4">{exp.location}</p>
 
-              <ul className="list-disc space-y-2 pl-5 text-slate-300">
+              <ul className="list-disc space-y-2 pl-5 ">
                 {exp.responsibilities.map((resp, index) => (
                   <li key={index}>{resp}</li>
                 ))}

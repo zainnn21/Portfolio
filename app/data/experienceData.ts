@@ -21,7 +21,7 @@ export const experienceData: Experience[] = [
     duration: "June 2023 - April 2024",
     location: "Jakarta, Indonesia",
     responsibilities: [
-      "Developed and maintained backend systems for banking applications using Java and Spring Boot, ensuring high performance and reliability.",
+      "Developed and maintained backend systems for banking applications (Line Bank) using Java and Spring Boot, ensuring high performance and reliability.",
       "Collaborated with cross-functional teams to design and implement new features, fixing bugs, and optimizing existing systems.",
     ],
   },
@@ -33,7 +33,7 @@ export const experienceData: Experience[] = [
     duration: "Dec 2022 - June 2023",
     location: "Jakarta, Indonesia",
     responsibilities: [
-      "Developed and maintained banking applications using C, Html, XML , ensuring high performance and reliability.",
+      "Developed and maintained banking applications (OK Bank) using C, Html, XML , ensuring high performance and reliability.",
       "Collaborated with cross-functional teams to design and implement new features, fixing bugs, and optimizing existing systems.",
     ],
   },
