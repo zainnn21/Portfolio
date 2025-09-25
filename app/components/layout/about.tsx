@@ -5,11 +5,11 @@ import Image from "next/image";
 
 const AboutSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h2 className="text-4xl font-bold mb-4">
+    <div className="flex w-full flex-col items-center justify-center">
+      <h2 className="mb-8 px-4 text-center text-3xl font-bold md:mb-12 md:text-4xl">
         "How do we know that you are a good candidate?"
       </h2>
-      <div className="w-full max-w-6xl grid md:grid-cols-2 gap-16 items-center p-8 rounded-lg shadow-2xl border-4 bg-background/80 backdrop-blur-sm">
+      <div className="grid w-full max-w-6xl items-center gap-8 rounded-lg border-4 bg-background/80 p-4 shadow-2xl backdrop-blur-sm md:grid-cols-2 md:gap-16 md:p-8">
         <motion.div
           className="relative flex justify-center items-center"
           initial={{ opacity: 0, x: -50 }}
@@ -33,17 +33,17 @@ const AboutSection = () => {
             alt="Profile Picture"
             width={400}
             height={550}
-            className="shadow-2xl rounded-lg object-cover h-[550px]"
+            className="h-auto max-h-[600px] w-full max-w-sm rounded-lg object-cover shadow-2xl md:max-w-full"
           ></Image>
         </motion.div>
         <motion.div
-          className="flex flex-col gap-6 p-4"
+          className="flex flex-col gap-6 text-center md:p-4 md:text-left"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
-          <h2 className="text-4xl font-bold">Say No More!</h2>
-          <p className="max-w-2xl text-justify">
+          <h2 className="text-3xl font-bold md:text-4xl">Say No More!</h2>
+          <p className="max-w-2xl">
             A detail-oriented Full Stack Developer with a strong commitment to
             writing clean, maintainable code.
             <br />
@@ -67,7 +67,7 @@ const AboutSection = () => {
           </p>
           <a
             href="#skills"
-            className="mt-4 px-6 py-3 bg-gradient-to-r from-green-400 to-[#0CB36B] text-white font-semibold rounded-lg shadow-md hover:scale-105 transition-transform duration-300 ease-in-out w-fit"
+            className="mx-auto mt-4 w-fit rounded-lg bg-gradient-to-r from-green-400 to-[#0CB36B] px-6 py-3 font-semibold text-white shadow-md transition-transform duration-300 ease-in-out hover:scale-105 md:mx-0"
           >
             My Skill
           </a>
