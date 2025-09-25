@@ -11,7 +11,6 @@ import SkillsSection from "./components/layout/skills";
 import ProjectsSection from "./components/layout/projects";
 import ExperienceSection from "./components/layout/experience";
 import EducationSection from "./components/layout/education";
-import ContactSection from "./components/layout/contact"
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -78,13 +77,13 @@ export default function Home() {
             > 
             <EducationSection/>
             </section>
-            {/* section 7: Contact */}
+            {/* section 7: Contact
             <section
             id="contact"
             className="flex min-h-screen items-center justify-center px-4 md:px-24"
             >
               <ContactSection/>
-            </section>
+            </section> */}
           </main>
         </>
       )}

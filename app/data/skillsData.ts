@@ -3,19 +3,16 @@ import {
   SiNodedotjs,
   SiTypescript,
   SiTailwindcss,
-  SiFramer,
   SiPostgresql,
   SiGit,
   SiDocker,
-  SiReact,
-  SiPrisma,
   SiOracle,
   SiC,
   SiSpringboot,
   SiElasticsearch,
   SiUnity,
 } from "react-icons/si";
-import { FaCode, FaDatabase, FaJira } from "react-icons/fa";
+import { FaJira } from "react-icons/fa";
 import { IconType } from "react-icons";
 import { TbBrandCSharp } from "react-icons/tb";
 
